@@ -4,14 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Школа Ромаши</title>
+    <style>
+        /* Стили для всего тела страницы */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #2c2c2c, #b30000); /* Черно-красный градиент */
+            color: white; /* Белый цвет текста */
+            text-align: center; /* Центрирование текста */
+            padding: 100px 20px; /* Отступы сверху и снизу */
+            height: 100vh; /* Высота страницы на всю высоту экрана */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Стили для заголовка */
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Тень для текста */
+            margin-bottom: 40px; /* Отступ снизу */
+        }
+
+        /* Стили для блока с изображениями */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Расстояние между изображениями */
+            margin-top: 30px; /* Отступ сверху */
+            flex-wrap: wrap; /* Автоматический перенос изображений, если они не помещаются */
+        }
+
+        /* Стили для изображений */
+        img {
+            width: 350px; /* Ширина изображений */
+            height: auto;
+            border-radius: 15px; /* Скругленные углы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень вокруг изображений */
+            transition: transform 0.3s ease-in-out; /* Плавный переход при наведении */
+        }
+
+        /* Эффект увеличения при наведении */
+        img:hover {
+            transform: scale(1.05); /* Увеличение изображений */
+        }
+
+    </style>
 </head>
 <body>
 
     <h1>Что ромаша твоя школа?</h1>
 
-    <div>
-        <img src="https://learn.logikaschool.com/uploads/student/5223700/67eccaf977c6b.png" alt="Фото 1" width="400">
-        <img src="https://learn.logikaschool.com/uploads/student/5223700/67ecccdb88b0e.png" alt="Фото 2" width="400">
+    <div class="image-container">
+        <img src="https://learn.logikaschool.com/uploads/student/5223700/67eccaf977c6b.png" alt="Фото 1">
+        <img src="https://learn.logikaschool.com/uploads/student/5223700/67ecccdb88b0e.png" alt="Фото 2">
+        <img src="https://learn.logikaschool.com/uploads/student/5223700/67ecd075c9bba.jpg" alt="Фото 3">
     </div>
 
 </body>
