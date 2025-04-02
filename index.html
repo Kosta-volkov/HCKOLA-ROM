@@ -9,7 +9,9 @@
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #2c2c2c, #b30000); /* Черно-красный градиент */
+            background: linear-gradient(to bottom, #2c2c2c, #b30000), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2OuaXoE7_jfOi1X3XVWjvh9nUODBJcX95gg6PwwvHKHX9gQ1Ju6OSUdHvskE2dS5_lq8&usqp=CAU'); /* Черно-красный градиент и фоновое изображение */
+            background-size: cover; /* Фон будет покрывать всю страницу */
+            background-position: center; /* Центрирование фона */
             color: white; /* Белый цвет текста */
             text-align: center; /* Центрирование текста */
             padding: 100px 20px; /* Отступы сверху и снизу */
@@ -17,6 +19,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            overflow: hidden; /* Блокировка прокрутки */
         }
 
         /* Стили для заголовка */
@@ -34,6 +37,7 @@
             gap: 30px; /* Расстояние между изображениями */
             margin-top: 30px; /* Отступ сверху */
             flex-wrap: wrap; /* Автоматический перенос изображений, если они не помещаются */
+            pointer-events: none; /* Отключаем возможность взаимодействия с изображениями */
         }
 
         /* Стили для изображений */
@@ -42,12 +46,19 @@
             height: auto;
             border-radius: 15px; /* Скругленные углы */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень вокруг изображений */
-            transition: transform 0.3s ease-in-out; /* Плавный переход при наведении */
+            pointer-events: all; /* Включаем возможность взаимодействовать только с изображениями */
         }
 
-        /* Эффект увеличения при наведении */
+        /* Отключаем анимацию при наведении */
         img:hover {
-            transform: scale(1.05); /* Увеличение изображений */
+            transform: none; /* Убираем эффект увеличения */
+        }
+
+        /* Отключаем прокрутку на мобильных устройствах */
+        @media (max-width: 768px) {
+            body {
+                touch-action: none; /* Отключаем прокрутку на мобильных устройствах */
+            }
         }
 
     </style>
