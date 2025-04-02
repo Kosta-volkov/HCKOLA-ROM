@@ -6,8 +6,14 @@
     <title>Школа Ромаши</title>
     <style>
         /* Стили для всего тела страницы */
-        body {
+        body, html {
             margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Отключаем прокрутку для всей страницы */
+        }
+
+        body {
             font-family: 'Arial', sans-serif;
             background: linear-gradient(to bottom, #2c2c2c, #b30000), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2OuaXoE7_jfOi1X3XVWjvh9nUODBJcX95gg6PwwvHKHX9gQ1Ju6OSUdHvskE2dS5_lq8&usqp=CAU'); /* Черно-красный градиент и фоновое изображение */
             background-size: cover; /* Фон будет покрывать всю страницу */
@@ -19,7 +25,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            overflow: hidden; /* Блокировка прокрутки */
         }
 
         /* Стили для заголовка */
